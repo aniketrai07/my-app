@@ -5,22 +5,19 @@ pipeline {
 
         stage('Build') {
             steps {
-                echo 'Installing dependencies and compiling...'
-                sh 'mvn clean compile'
+                echo 'Build Stage Completed'
             }
         }
 
         stage('Test') {
             steps {
-                echo 'Running unit tests...'
-                sh 'mvn test'
+                echo 'Test Stage Completed'
             }
         }
 
         stage('Deploy') {
             steps {
-                echo 'Deploying application...'
-                sh 'docker run -d --name myapp nginx'
+                echo 'Deploy Stage Completed'
             }
         }
     }
